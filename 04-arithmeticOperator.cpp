@@ -11,6 +11,8 @@ int main() {
   cout << num1 / num2 << endl; // division operator - gives quotient as output
   cout << num1 % num2 << endl; // modulo operator - gives remainder as output
 
+  // note : [ a % (-b) = a % b ] but [ (-a) % b = -(a % b)]
+
 
   // Increment & Decrement Operator 
   num1++; // post increment operator - first use then increase
