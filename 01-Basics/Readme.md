@@ -38,3 +38,26 @@ The programs in this folder focus on basic concepts such as:
 1. Clone the repository:
    ```bash
    git clone https://github.com/Kundan-K-Jaiswal/cpp-journey.git
+
+2. Go to the basics folder:
+   ```bash
+    cd cpp-journey/01-Basics
+
+3. Compile a program:
+   ```bash
+    g++ filename.cpp -o output
+
+4. Run the program:
+   ```
+    ./output
+
+
+---
+
+## 👨‍💻 Author
+
+**Kundan Kumar Jaiswal**
+
+**B.Tech CSE (AIML) Student**
+
+🔗 GitHub: Kundan-K-Jaiswal
