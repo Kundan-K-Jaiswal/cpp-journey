@@ -20,17 +20,6 @@ The programs in this folder are based on:
 
 ---
 
-## 🎯 Learning Objectives
-
-By practicing these questions, you will:
-
-- Strengthen problem-solving skills
-- Improve understanding of C++ fundamentals
-- Learn how to approach programming problems
-- Build confidence for exams and coding interviews
-
----
-
 ## 🛠️ Tools & Language
 
 - **Language:** C++
@@ -57,19 +46,6 @@ By practicing these questions, you will:
    ```
     ./output
 
----
-
-## 🧠 Recommended Practice Flow
-
-- Read the problem statement carefully
-
-- Try solving it on your own
-
-- Implement the logic in C++
-
-- Compare with the solution
-
-- Optimize and refactor if needed
 
 ---
 
@@ -80,7 +56,3 @@ By practicing these questions, you will:
 **B.Tech CSE (AIML) Student**
 
 🔗 GitHub: Kundan-K-Jaiswal
-
----
-
-## ⭐ Keep practicing and level up your C++ skills!
