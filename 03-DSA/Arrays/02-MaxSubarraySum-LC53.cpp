@@ -26,13 +26,13 @@
 using namespace std;
 int main() {
   vector<int> arr = {-2,1,-3,4,-1,2,1,-5,4};
-  int sz = arr.size();
-  int maxSum = 0;
-  for (int i = 0; i < sz; i++ ) {
-    int sum = 0;
-    for (int j = i; j < sz; j++ ) {
-      sum += arr[j];
-      maxSum = max(sum, maxSum);
+  
+  int maxSum = arr[0], sum = 0;
+  for (int val : arr ) {
+    sum += val;
+    maxSum = max(maxSum, sum);
+    if(sum < 0 ) {
+      sum = 0;
     }
   }
   cout << maxSum;
@@ -41,6 +41,7 @@ int main() {
 
 
 
-// Approach : Brute Force
-// Time Complexity : O(n2)
+// Approach : Kadane's Algorithm
+// Concept : If the subarray sum becomes -ve, that means it won't be included in our answer since we are looking for maximum subarray sum
+// Time Complexity : O(n)
 // Space Complexity : O(1)
