@@ -23,25 +23,23 @@
 using namespace std;
 
 int majorityElement(vector<int> nums) {
-  int n = nums.size();
-  int minMajorCount = n/2;
-  for ( int i=0; i<n; i++ ) {
-    int count = 0;
-    for ( int j = i; j<n; j++ ) {
-      if (nums[i] == nums[j]) {
-        count++;
-      }
+  int ans, feq = 0;
+  for ( int i=0; i<nums.size(); i++ ) {
+    if ( feq == 0 ) {
+      ans = nums[i];
     }
-    if ( count >= minMajorCount ) {
-      return nums[i];
+    if ( ans == nums[i] ) {
+      feq++;
+    } else {
+      feq--;
     }
   }
-  return -1000;
+  return ans;
 }
 
 int main() {
 
-  vector<int> nums = {3};
+  vector<int> nums = {2,2,1,1,1,2,2};
 
   cout << majorityElement(nums) << endl;
 
@@ -50,7 +48,7 @@ int main() {
 
 
 
-// Approach : Brute Force
-// Concept : Counting frequency for each elemnt in the array & checking if it is >= floor val of n/2
-// Time Complexity : O(n2)
+// Approach : Moore's Voting Algorithm
+// Concept : Since, the majority element exists, it cannot be completely eliminated by pairwise cancellations 
+// Time Complexity : O(n)
 // Space Complexity : O(1)
