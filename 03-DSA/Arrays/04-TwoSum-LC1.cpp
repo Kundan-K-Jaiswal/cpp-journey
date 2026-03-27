@@ -26,16 +26,36 @@
 
 #include<iostream>
 #include<vector>
+#include<algorithm>
 using namespace std;
 
 vector<int> twoSum(vector<int> nums, int target) {
-  for (int i = 0; i<nums.size(); i++ ) {
-    for ( int j = i+1; j<nums.size(); j++ ) {
-        if (nums[i] + nums[j] == target ) {
-          return {i,j};
-        }
+  vector<int> duplicate = nums;
+  int pair1, pair2;
+
+  sort(duplicate.begin(),duplicate.end());
+
+  int st = 0, end = duplicate.size() - 1;
+  while(st<end) {
+    int sum = duplicate[st] + duplicate[end];
+    if ( sum == target ) {
+      pair1 = duplicate[st];
+      pair2 = duplicate[end];
+      break;
+    } else if ( sum < target ) {
+      st++;
+    } else {
+      end--;
     }
   }
+
+  vector<int> ans;
+  for(int i = 0; i<nums.size(); i++ ) {
+    if ( nums[i] == pair1 || nums[i] == pair2 ) {
+      ans.push_back(i);
+    }
+  }
+  return ans;
 }
 
 int main() {
@@ -52,7 +72,7 @@ int main() {
 
 
 
-// Approach : Brute Force
-// Concept : Checking each combination to find the pair whose sum is equal to target value 
-// Time Complexity : O(n^2)
-// Space Complexity : O(1)
+// Approach : Two Pointer & Sorting 
+// Concept : Sort the array and find the value pair whose sum = target using two pointer, now find the index of those value 
+// Time Complexity : O(nlogn)
+// Space Complexity : O(n)
