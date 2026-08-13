@@ -43,7 +43,6 @@
 
 
 #include<iostream>
-#include<vector>
 using namespace std;
 
 bool validDigit(int n, int x) {
